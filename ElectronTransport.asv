@@ -13,7 +13,7 @@ Const.q = 1.30217662e-19;            % Elementary Charge C
 
 average = 0;
 scatterProb = 0.05;         % Probability of scattering at each t
-numSteps = 1000;            % number of iterations for sim
+numSteps = 10;            % number of iterations for sim
 numOfParticles = 1000;      % set this maunually to what you want to sim
 sizeX = 10;                % set size of the semiconductor region
 positionX = zeros(1,numOfParticles);   % random postions of particles
@@ -53,7 +53,7 @@ ylabel(ax3, 'Velocity (m/s)');
 
 ax4 = subplot(4,1,4,'Parent',fig);
 hold(ax4, 'on')
-plotAvg = plot(ax4,tStep, avg1);
+plotAvg = plot(ax4,tStep, average);
 title(ax4, 'Particle Velocity Average');
 xlabel(ax4,'Time (s)');
 ylabel(ax4, 'Average Velocity (m/s)');
